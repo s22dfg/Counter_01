@@ -20,6 +20,19 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBOutlet weak var num: UILabel!
+        var value = 0
+    
+    @IBAction func tap(_ sender: Any) {
+        value = value + 1
+        num.text = String(value)
+    }
+    
+    @IBAction func reset(_ sender: Any) {
+        
+        value = 0
+        num.text = String(value)
+    }
+    
 }
 
