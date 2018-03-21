@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var cu = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -22,17 +22,23 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var num: UILabel!
         var value = 0
-    
     @IBAction func tap(_ sender: Any) {
         value = value + 1
         num.text = String(value)
     }
-    
     @IBAction func reset(_ sender: Any) {
-        
         value = 0
         num.text = String(value)
     }
     
+    @IBAction func btColor(_ sender: Any) {
+        if cu==1 {
+            view.backgroundColor = UIColor.green
+            cu=0
+        }else {
+            view.backgroundColor = UIColor.yellow
+            cu=1
+        }
+    }
 }
 
